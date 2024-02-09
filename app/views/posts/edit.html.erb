@@ -1,0 +1,10 @@
+<h1>投稿した内容の編集</h1>
+
+<%= form_with model: @post, html: {class: "form-container"} do |form| %>
+  <div class ="form-input"><%= form.label :content %> <%= form.text_area :content %></div>
+  <div class ="button-container"><%= form.submit "更新", class: "link-edit-button" %></div>
+<% end %>
+
+<footer>
+  	<h3>©All rights reserved by Dai Sato</h3>
+</footer>

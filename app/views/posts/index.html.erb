@@ -1,0 +1,26 @@
+<div class="contain">
+    <header>TwitterCloneアプリ</header>
+
+<div class ="button-container">
+  <%= link_to "新しい投稿", new_post_path, class: "link-button" %>
+</div>
+
+<ul>
+<% @posts.each do |post| %>
+  <li>
+    <p><%= post.content %></p>
+    <span>
+      <small><%= post.created_at %></small>
+    </span>
+    <div class="edit-delete-wrapper">
+    <%= link_to "編集", edit_post_path(post), class: "link-edit-button" %>
+    <%= button_to "削除", post_path(post), method: :delete, class: "link-delete-button" %>
+    </div>
+  </li>
+<% end %>
+</ul>
+
+<footer>
+  	<h3>©All rights reserved by Dai Sato</h3>
+</footer>
+</div>

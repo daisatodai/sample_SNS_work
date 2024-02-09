@@ -1,0 +1,22 @@
+<div class="contain">
+    <header>TwitterCloneアプリ</header>
+
+  <%= form_with model: @post, html: {class: "form-container"} do |form| %>
+
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+        <% @post.errors.each do |error| %>
+          <p><%= error.full_message %></p>
+        <% end %>
+    </div>
+  <% end %>
+
+
+  <div class ="form-input"><%= form.label :content %> <%= form.text_area :content %></div>
+  <div class ="button-container"><%= form.submit "投稿", class: "link-edit-button" %></div>
+  <% end %>
+
+  <footer>
+  	<h3>©All rights reserved by Dai Sato</h3>
+</footer>
+</div>
